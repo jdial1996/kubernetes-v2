@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+  labels: 
+    name: db-service
+    app: demo-voting-app
+spec:
+  ports:
+    - targetPort: 5432  # because this is the port that the postgres db listens on
+      port: 5432
+  selector:
+      name: postgres-pod
+      app: demo-voting-appp
+
+# this is for exposing the postgres database to the worker
+# services should be named based on what the other application is looking for
+  # in this case we know that the worker-app tries to connect to a service on the host named db
