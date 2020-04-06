@@ -7,7 +7,8 @@ kind: Deployment
 spec:
   replicas: 1
   selector:
-    app: demo-voting-app
+    matchLabels:
+      app: demo-voting-app
   template:
     metadata:
       name: voting-app-pod
