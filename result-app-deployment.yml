@@ -16,11 +16,11 @@ spec:
       labels: 
         name: result-app-pod
         app: demo-voting-app
-      spec:
-        containers: 
-          - name: result-app
-            image: dockersamples/examplevotingapp_result
-            ports:  #port to be exposed
-              - containerPort: 80    
+    spec:
+      containers: 
+        - name: result-app
+          image: dockersamples/examplevotingapp_result
+          ports:  #port to be exposed
+            - containerPort: 80    
 
 # result app exposes port 80 because it's a web application

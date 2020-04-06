@@ -16,12 +16,12 @@ spec:
       labels: 
         name: postgres-pod
         app: demo-voting-app
-  spec:
-    containers: 
-      - name: postgres
-        image: postgres:9.4
-        ports:  #port to be exposed
-          - containerPort: 5432
+    spec:
+      containers: 
+        - name: postgres
+          image: postgres:9.4
+          ports:  #port to be exposed
+            - containerPort: 5432
 
   # 5432 is the defualt port for postgres  
     
